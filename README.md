@@ -1,4 +1,4 @@
-# Laravel 9 通過註冊檢查類型來監控健康狀況
+# Laravel 10 通過註冊檢查類型來監控健康狀況
 
 引入 spatie 的 laravel-health 套件來擴增通過註冊檢查類型來監控健康狀況，以報告應用程式基礎結構元件的健康情況。
 
@@ -33,5 +33,5 @@ $ php artisan health:check
 ![](https://i.imgur.com/qY5jgv1.png)
 > 所有已註冊的檢查類型將自動運行
 
-![](https://i.imgur.com/LVPjewn.png)
+![](https://i.imgur.com/FjQ91Jy.png)
 > 監視已註冊的檢查類型健康情況
