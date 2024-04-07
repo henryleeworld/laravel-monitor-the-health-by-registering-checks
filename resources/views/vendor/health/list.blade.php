@@ -28,7 +28,7 @@
                             <x-health-status-indicator :result="$result" />
                             <div>
                                 <dd class="-mt-1 font-bold text-gray-900 dark:text-white md:mt-1 md:text-xl">
-                                    {{ $result->label }}
+                                    {{ __($result->label) }}
                                 </dd>
                                 <dt class="mt-0 text-sm font-medium text-gray-600 dark:text-gray-300 md:mt-1">
                                     @if (!empty($result->notificationMessage))
