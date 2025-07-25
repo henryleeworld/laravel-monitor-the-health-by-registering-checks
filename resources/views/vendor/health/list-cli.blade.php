@@ -1,11 +1,11 @@
 <div class="mx-2 my-1">
     @if(count($checkResults?->storedCheckResults ?? []))
         <div class="w-full max-w-120 mb-1 py-1 text-white bg-blue-800">
-            <span class="px-2 text-left w-1/2">Laravel Health Check Results</span>
+            <span class="px-2 text-left w-1/2">{{ __('Laravel Health Check Results') }}</span>
             <span class="px-2 text-right w-1/2">
-               Last ran all the checks
+                {{ __('Last ran all the checks') }}
                 @if ($lastRanAt->diffInMinutes() < 1)
-                    just now
+                    {{ __('just now') }}
                 @else
                     {{ $lastRanAt->diffForHumans() }}
                 @endif
@@ -30,8 +30,8 @@
         @endforeach
     @else
         <div>
-            No checks have run yet...<br />
-            Please execute this command:
+            {{ __('No checks have run yet...') }}<br />
+            {{ __('Please execute this command:') }}
             <br /><br />
             <b>php artisan health:check</b>
         </div>
