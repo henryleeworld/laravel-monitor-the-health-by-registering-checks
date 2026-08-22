@@ -57,6 +57,12 @@ return [
         'throttle_notifications_for_minutes' => 60,
         'throttle_notifications_key' => 'health:latestNotificationSentAt:',
 
+        /*
+         * When set to true, notifications will only be sent when at least one
+         * check has a 'failed' status. Warnings will be ignored.
+         */
+        'only_on_failure' => false,
+
         'mail' => [
             'to' => 'your@example.com',
 
@@ -111,7 +117,7 @@ return [
      * This way you can get notified if Horizon goes down.
      */
     'horizon' => [
-        'heartbeat_url' => env('HORIZON_HEARTBEAT_URL', null),
+        'heartbeat_url' => env('HORIZON_HEARTBEAT_URL'),
     ],
 
     /*
@@ -120,7 +126,7 @@ return [
      * This way you can get notified if the schedule fails to run.
      */
     'schedule' => [
-        'heartbeat_url' => env('SCHEDULE_HEARTBEAT_URL', null),
+        'heartbeat_url' => env('SCHEDULE_HEARTBEAT_URL'),
     ],
 
     /*
@@ -132,7 +138,7 @@ return [
     'theme' => 'light',
 
     /*
-     * When enabled,  completed `HealthQueueJob`s will be displayed
+     * When enabled, completed `HealthQueueJob`s will be displayed
      * in Horizon's silenced jobs screen.
      */
     'silence_health_queue_job' => true,
@@ -142,4 +148,17 @@ return [
      * check has failed
      */
     'json_results_failure_status' => 200,
+
+    /*
+     * You can specify a secret token that needs to be sent in the X-Secret-Token for secured access.
+     */
+    'secret_token' => env('HEALTH_SECRET_TOKEN'),
+
+/**
+ * By default, conditionally skipped health checks are treated as failures.
+ * You can override this behavior by uncommenting the configuration below.
+ *
+ * @link https://spatie.be/docs/laravel-health/v1/basic-usage/conditionally-running-or-modifying-checks
+ */
+    // 'treat_skipped_as_failure' => false
 ];

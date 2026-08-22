@@ -5,6 +5,7 @@
     "Did not respond": "沒有回應",
     "Invalid response": "無效的回應",
     "just now": "剛剛",
+    "Laravel Health": "Laravel 健康狀態",
     "Laravel Health Check Results": "Laravel 健康狀態檢查結果",
     "Last ran all the checks": "最後執行了所有檢查",
     "No checks have run yet...": "尚未進行任何檢查...",

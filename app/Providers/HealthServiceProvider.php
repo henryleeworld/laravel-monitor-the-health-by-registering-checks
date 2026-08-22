@@ -12,7 +12,7 @@ use Spatie\Health\Facades\Health;
 class HealthServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * Register any application services.
      */
     public function register(): void
     {
@@ -26,7 +26,7 @@ class HealthServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap services.
+     * Bootstrap any application services.
      */
     public function boot(): void
     {

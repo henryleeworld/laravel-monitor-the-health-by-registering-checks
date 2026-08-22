@@ -1,5 +1,5 @@
 @component('mail::message')
-# Laravel Health
+# {{ __('Laravel Health') }}
 
 {{ __('health::notifications.check_failed_mail_body') }}
 
